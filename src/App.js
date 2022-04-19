@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
 
-function App() {
+const App = () => {
+
+  const[allPokemons, setallPokemons] = useState([])
+  const[bulbasaur, setBulbasaur] = useState([])
+
+  // Variáveis para montar o endereço de cada imagem dentro do array
+  const https = 'https://img.pokemondb.net/artwork/large/'
+  const jpg = '.jpg'
+
+  useEffect(() => {
+    fetch('https://pokeapi.co/api/v2/pokemon')
+    .then(response => response.json())
+    .then(data => {
+      setallPokemons(data.results)
+    })
+  }, [])
+
+
+  useEffect(() => {
+    fetch('https://pokeapi.co/api/v2/pokemon/1')
+    .then(response => response.json())
+    .then(data => {
+      setBulbasaur(data)
+      console.log(data);
+    })
+  },[])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <h1>Pokedex</h1>
+
+      {
+        allPokemons.map((item, index) => {
+          return (
+            
+              <div>
+                <img src={https + item.name + jpg} />
+                <span key={index}> Nome: {item.name}, URL: {item.url} </span>                
+              </div>
+
+            
+          )
+        }) 
+        
+      }
+
+      
+      
+    </>
+  )
 }
 
 export default App;
