@@ -11,6 +11,8 @@ import Typography from '@material-ui/core/Typography';
 // Importação da imagem de perfil
 import profileImg from '../img/joaoboscojunior.jpg'
 
+// Importação da bibliotece CLASSNAMES para modificar o METERIAL-UI
+import classNames from 'classnames';
 
 const useStyles = makeStyles({
   root: {
@@ -18,11 +20,13 @@ const useStyles = makeStyles({
   },
 });
 
-const CardSobre = () => {
+
+// Componente
+const CardSobre = ({classCardSobre}) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classNames(classCardSobre, classes.root)}>
       <CardActionArea>
         <CardMedia
           component="img"
