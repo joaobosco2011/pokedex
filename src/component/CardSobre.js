@@ -16,7 +16,7 @@ import classNames from 'classnames';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 500,
+    maxWidth: 800,
   },
 });
 
@@ -31,7 +31,7 @@ const CardSobre = ({classCardSobre}) => {
         <CardMedia
           component="img"
           alt="João Bosco Junior"
-          height="140"
+          height="600"
           image= {profileImg}
           title="João Bosco Junior"
         />
@@ -40,7 +40,7 @@ const CardSobre = ({classCardSobre}) => {
             João Bosco Junior
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Meu nome é João Bosco Junior e sou um entusiasta de tecnologia e programação e desenvolvedor FrontEnd júnior em busca de me desenvolver pessoal e profissionalmente.
+            Meu nome é João Bosco Junior e sou um entusiasta em tecnologia, programação e desenvolvedor FrontEnd júnior em busca de crescimento pessoal e profissional.
           </Typography>
         </CardContent>
       </CardActionArea>
