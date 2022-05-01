@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar_title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.navbar_menu {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+.navbar_menu_inicio {
+    text-decoration: none;
+}
+
+.navbar_menu_sobre {
+    text-decoration: none;
+}
