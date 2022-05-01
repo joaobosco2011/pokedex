@@ -3,7 +3,7 @@ import PokemonCard from './PokemonCard'
 
 // Importação do css do componente POKEDEX
 import './Pokedex.css'
-
+    
 // Componentes do MATERIAL-UI
 import { Container, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
@@ -14,17 +14,15 @@ import { Grid } from '@material-ui/core'
 // Configuração do CSS do componente CONTAINER do MATERIAL-UI
 const useStyles = makeStyles((theme) => ({
     container: {
-        padding: '10px 20px',
         background: '#F9F9F9',
-        borderRadius: '20px'
+        borderRadius: '10px'
     },
     card: {
-        padding: '10px',
-        margin: '20px',
+        margin: '10px auto',
     },
 }))
 
-
+// Componente
 const Pokedex = () => {
     const classes = useStyles()
 
@@ -70,7 +68,10 @@ const Pokedex = () => {
 
             <Container className={classes.container}>
 
-                <Grid container>
+                <Grid 
+                    container 
+                    spacing={2}
+                >
                     { 
                         allPokemons.map((item, index) => (
                             <Grid item xs={12} md={6} lg={4} xl={3}>
