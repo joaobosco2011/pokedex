@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+
+// Importação dos componentes do MATERIAL UI para redenrizar o PokemonCard
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
@@ -13,17 +14,19 @@ import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Statistics from './Statistics';
-import Abilities from './Abilities';
 
-// Importação da bibliotece CLASSNAMES para modificar o METERIAL-UI
+// Importação dos componentes Estatíticas e Habilidades
+import Estatisticas from './Estatisticas';
+import Habilidades from './Habilidades';
+
+// Importação da bibliotece CLASSNAMES adicionar classas e modificar o METERIAL-UI
 import classNames from 'classnames';
 
 
-
+// Configuração do tema do componente PokemonCard
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 450,
   },
   media: {
     height: 0,
@@ -45,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-// Componente
+// ----------------------------------==--------------------------------
 const PokemonCard = ({name, classCard}) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
@@ -54,9 +57,9 @@ const PokemonCard = ({name, classCard}) => {
     setExpanded(!expanded);
   };
 
+
   // Fetch para pegar a img de cada pokemon da própria API
     const [urlImg, setUrlImg] = useState('')
-
 
     useEffect(() => {
       fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
@@ -70,7 +73,6 @@ const PokemonCard = ({name, classCard}) => {
 
   return (
     <Card className={classNames(classCard, classes.root)}>
-      <CardHeader title={name} />
       <CardMedia
         className={classes.media}
         image={urlImg} alt={`Pokemon ${name}`}
@@ -80,7 +82,7 @@ const PokemonCard = ({name, classCard}) => {
         <Typography variant="body2" color="textSecondary" component="p">
 
             {/* Componente de estatítica que busca na API */}
-          <Statistics name_statistics={name} />
+          <Estatisticas nome_estatisticas={name} />
           
         </Typography>
       </CardContent>
@@ -106,7 +108,7 @@ const PokemonCard = ({name, classCard}) => {
         <CardContent>
 
             {/* Componente que traz as abilidades de cada pokemon */}
-            <Abilities name_pokemon_abilities={name} />
+            <Habilidades nome_pokemon_habilidades={name} />
 
         </CardContent>
       </Collapse>

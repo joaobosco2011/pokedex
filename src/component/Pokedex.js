@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+
+// Importação do componente Pokecard
 import PokemonCard from './PokemonCard'
 
 // Importação do css do componente POKEDEX
@@ -22,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-// Componente
+
+// ----------------------------------==--------------------------------
 const Pokedex = () => {
     const classes = useStyles()
 
@@ -31,6 +34,7 @@ const Pokedex = () => {
     // Variável para mudança de páginas na aplicação
     const[next_and_previous_page, setNextAndPreviousPage] = useState(0)
     
+
     // Traz o nome de cada pokemon
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon?offset=${next_and_previous_page}&limit=20`)
@@ -41,6 +45,7 @@ const Pokedex = () => {
         })
     }, [next_and_previous_page])
 
+
     // Função que manipula a variável de mudança de página
     const handleOnClick = (operador) => {
         if (operador === '+') {
@@ -50,10 +55,12 @@ const Pokedex = () => {
         }
     }
 
+    
     return (
         <>
             {/* <span className='contado_pagina'>{next_and_previous_page}</span> */}
 
+            {/* Botões de avanço de páginas */}
             <div className='btn_next_and_previus_page'>
                 {/* Botões com o desing do METERIAL-UI */}
                 <Button className='btn_previus' variant="contained" color="primary" onClick={() => handleOnClick('-')}>
@@ -62,12 +69,10 @@ const Pokedex = () => {
                 <Button className='btn_next' variant="contained" color="primary" onClick={() => handleOnClick('+')}>
                     Próxima Página
                 </Button>
-                
-                {/* <button onClick={() => handleOnClick('+')}>Próxima Página</button> */}
             </div>
 
+            {/* Retrono do array com o nome de cada pokemon */}
             <Container className={classes.container}>
-
                 <Grid 
                     container 
                     spacing={2}
@@ -75,11 +80,10 @@ const Pokedex = () => {
                     { 
                         allPokemons.map((item, index) => (
                             <Grid item xs={12} md={6} lg={4} xl={3}>
-                                {/* <h1 >{item.name}</h1>
-                                <img key={index} src= {`https://img.pokemondb.net/artwork/large/${item.name}.jpg`} alt={`Pokemon ${item.name}`}/> */}
-
+                                {/* Passado para o componente PokemonCard o nome de cada pokemon */}
                                 <PokemonCard 
                                     name={item.name}
+                                    // Passando pela props o nome da classe para centralizar cada card quando tiver somente um na tela
                                     classCard={classes.card}
                                 />
                             </Grid>

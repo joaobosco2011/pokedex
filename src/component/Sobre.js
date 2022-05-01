@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
-// Componente
+// ----------------------------------==--------------------------------
 const Sobre = () => {
     const classes = useStyles()
 

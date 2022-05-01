@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 });
 
 
-// Componente
+// ----------------------------------==--------------------------------
 const CardSobre = ({classCardSobre}) => {
   const classes = useStyles();
 
