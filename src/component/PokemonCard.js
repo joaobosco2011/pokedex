@@ -57,6 +57,7 @@ const PokemonCard = ({name, classCard}) => {
   // Fetch para pegar a img de cada pokemon da própria API
     const [urlImg, setUrlImg] = useState('')
 
+
     useEffect(() => {
       fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
           .then(response => response.json())
@@ -65,7 +66,7 @@ const PokemonCard = ({name, classCard}) => {
           })
     },[name])
 
-    
+
 
   return (
     <Card className={classNames(classCard, classes.root)}>
@@ -105,7 +106,7 @@ const PokemonCard = ({name, classCard}) => {
         <CardContent>
 
             {/* Componente que traz as abilidades de cada pokemon */}
-            {/* <Abilities name_pokemon_abilities={name} /> */}
+            <Abilities name_pokemon_abilities={name} />
 
         </CardContent>
       </Collapse>
