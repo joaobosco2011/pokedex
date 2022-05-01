@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <>
             <h1 className="navbar_title">Provu Pokedex</h1>
-            
+
             <ul className="navbar_menu">
                 <li className="navbar_menu_inicio">
                     <Link to='/component/pokedex'>Início</Link>
