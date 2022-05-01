@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -54,18 +54,33 @@ const PokemonCard = ({name, classCard}) => {
     setExpanded(!expanded);
   };
 
+  // Fetch para pegar a img de cada pokemon da própria API
+    const [urlImg, setUrlImg] = useState('')
+
+    useEffect(() => {
+      fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+          .then(response => response.json())
+          .then(data => {
+              setUrlImg(data.sprites.front_default)
+          })
+    },[name])
+
+    
+
   return (
     <Card className={classNames(classCard, classes.root)}>
       <CardHeader title={name} />
       <CardMedia
         className={classes.media}
-        image={`https://img.pokemondb.net/artwork/large/${name}.jpg`} alt={`Pokemon ${name}`}
+        image={urlImg} alt={`Pokemon ${name}`}
         title={`Pokemon ${name}`}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
+
             {/* Componente de estatítica que busca na API */}
           <Statistics name_statistics={name} />
+          
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -88,7 +103,10 @@ const PokemonCard = ({name, classCard}) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-            <Abilities name_pokemon_abilities={name} />
+
+            {/* Componente que traz as abilidades de cada pokemon */}
+            {/* <Abilities name_pokemon_abilities={name} /> */}
+
         </CardContent>
       </Collapse>
     </Card>

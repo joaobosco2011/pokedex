@@ -11,7 +11,7 @@ const Abilities = ({name_pokemon_abilities}) => {
         axios.get(url)
             .then(response => {
                 setUrlAbilities1(response.data.abilities[0].ability.url)
-                // console.log(response.data.abilities[0].ability.url);
+                // console.log(response.data);
             })
     }, [name_pokemon_abilities])
 

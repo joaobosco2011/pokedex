@@ -31,7 +31,7 @@ const Pokedex = () => {
     // Variável para mudança de páginas na aplicação
     const[next_and_previous_page, setNextAndPreviousPage] = useState(0)
     
-    // Traz o nome e url de todos os pokemons
+    // Traz o nome de cada pokemon
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon?offset=${next_and_previous_page}&limit=20`)
         .then(response => response.json())
