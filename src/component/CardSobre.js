@@ -42,10 +42,31 @@ const CardSobre = () => {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          <a href="https://github.com/joaobosco2011" 
+            target='blanck' 
+            rel="noopener noreferrer"
+            style={{textDecoration: "none"}}
+          >
+            GitHub
+          </a>
         </Button>
         <Button size="small" color="primary">
-          Learn More
+          <a href="https://github.com/joaobosco2011/pokedex" 
+            target='_blank' 
+            rel="noopener noreferrer"
+            style={{textDecoration: 'none'}}
+          >
+            Provu Pokedex
+          </a>
+        </Button>
+        <Button size='small' color='primary'>
+          <a href="https://www.linkedin.com/in/jo%C3%A3o-bosco-junior-8a9798115/" 
+            target='_blank' 
+            rel="noopener noreferrer"
+            style={{textDecoration: 'none'}}
+          >
+            linkedin
+          </a>
         </Button>
       </CardActions>
     </Card>
