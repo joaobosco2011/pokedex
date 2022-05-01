@@ -1,0 +1,16 @@
+.redes_sociais {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.redes_sociais img {
+    width: 100px;
+}
+
+.imagem_perfil {
+    width: 300px;
+    border-radius: 50%;
+}

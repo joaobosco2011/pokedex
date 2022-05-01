@@ -1,0 +1,9 @@
+.btn_next_and_previus_page {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.btn_previus {
+    margin-left: 5px;
+}
