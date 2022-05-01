@@ -1,9 +1,20 @@
+.body {
+    background-color: brown;
+}
+
 .btn_next_and_previus_page {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     margin: 5px;
 }
 
 .btn_previus {
     margin-left: 5px;
+}
+
+.contado_pagina {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
 }

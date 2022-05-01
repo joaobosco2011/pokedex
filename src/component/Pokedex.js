@@ -14,7 +14,7 @@ import { Grid } from '@material-ui/core'
 // Configuração do CSS do componente CONTAINER do MATERIAL-UI
 const useStyles = makeStyles((theme) => ({
     container: {
-        padding: '10px 50px',
+        padding: '10px 20px',
         background: '#F9F9F9',
         borderRadius: '20px'
     },
@@ -54,7 +54,7 @@ const Pokedex = () => {
 
     return (
         <>
-            <span>{next_and_previous_page}</span>
+            {/* <span className='contado_pagina'>{next_and_previous_page}</span> */}
 
             <div className='btn_next_and_previus_page'>
                 {/* Botões com o desing do METERIAL-UI */}
