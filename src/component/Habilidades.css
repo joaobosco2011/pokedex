@@ -5,3 +5,8 @@ h1 {
 .item_habilidade {
     font-family: 'Roboto', sans-serif;
 }
+
+.btn {
+    margin: 5px;
+    display: inline-block;
+}

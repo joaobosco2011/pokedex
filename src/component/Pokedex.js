@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-// Importação do componente Pokecard
+// Importação dos componentes da aplicação
 import PokemonCard from './PokemonCard'
 
 // Importação do css do componente POKEDEX
@@ -40,8 +40,8 @@ const Pokedex = () => {
         fetch(`https://pokeapi.co/api/v2/pokemon?offset=${next_and_previous_page}&limit=20`)
         .then(response => response.json())
         .then(data => {
-        setallPokemons(data.results)
-        // console.log(data.results);
+            setallPokemons(data.results)
+            // console.log(data.results);
         })
     }, [next_and_previous_page])
 
@@ -71,6 +71,7 @@ const Pokedex = () => {
                 </Button>
             </div>
 
+            
             {/* Retrono do array com o nome de cada pokemon */}
             <Container className={classes.container}>
                 <Grid 

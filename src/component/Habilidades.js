@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './Habilidades.css'
-
+import { Button } from "@material-ui/core";
 
 // ----------------------------------==--------------------------------
 const Habilidades = ({nome_pokemon_habilidades}) => {
@@ -26,10 +26,12 @@ const Habilidades = ({nome_pokemon_habilidades}) => {
 
             {
                 habilidades.map(item => (
-                    <div>
-                        <p className="item_habilidade">
-                            {item.ability.name}
-                        </p>
+                    <div className="btn">
+                        <Button variant="contained" color="secondary">
+                            <p className="item_habilidade">
+                                {item.ability.name}
+                            </p>
+                        </Button>
                     </div>
                 ))
             }
