@@ -40,7 +40,7 @@ const CardSobre = ({classCardSobre}) => {
             João Bosco Junior
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Meu nome é João Bosco Junior e sou um entusiasta em tecnologia, programação e desenvolvedor FrontEnd júnior em busca de crescimento pessoal e profissional.
+            Meu nome é João Bosco Junior e sou um entusiasta em tecnologia, programação e desenvolvedor FrontEnd Junior em busca de crescimento pessoal e profissional. Esse desafio me fez aprender e superar os obstáculos que encontrei durante a trilha e conseguir alcançar os meus objetivos.
           </Typography>
         </CardContent>
       </CardActionArea>
