@@ -49,9 +49,13 @@ const Pokedex = () => {
     // Função que manipula a variável de mudança de página
     const handleOnClick = (operador) => {
         if (operador === '+') {
-        setNextAndPreviousPage(next_and_previous_page + 20)
+            if(next_and_previous_page >=0 && next_and_previous_page <= 1126) {
+                setNextAndPreviousPage(next_and_previous_page + 20)
+            }        
         } else {
-        setNextAndPreviousPage(next_and_previous_page - 20)
+            if(next_and_previous_page > 0 && next_and_previous_page <= 1126) {
+                setNextAndPreviousPage(next_and_previous_page - 20)
+            }
         }
     }
 
