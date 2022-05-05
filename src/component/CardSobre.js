@@ -40,7 +40,7 @@ const CardSobre = ({classCardSobre}) => {
             João Bosco Junior
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Meu nome é João Bosco Junior e sou um entusiasta em tecnologia, programação e desenvolvedor FrontEnd Junior em busca de crescimento pessoal e profissional. Esse desafio me fez aprender e superar os obstáculos que encontrei durante a trilha e conseguir alcançar os meus objetivos.
+            Meu nome é João Bosco Junior e sou desenvolvedor front-end junior em processo de aprendizado e busca de novos desafios e entusiasta de designs inovadores, tecnologia e programação. Gosto de trabalhar em equipe e ajudar o time. Meu maior foco é o front-end, sou apaixonado pelo que o HTML, CSS e Javascript podem nos proporcionar. Estou sempre buscando melhores práticas, aprender e experimentar novas coisas com o objetivo de programar soluções que facilitem a vida das pessoas.
           </Typography>
         </CardContent>
       </CardActionArea>
