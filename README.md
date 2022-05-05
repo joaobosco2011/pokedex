@@ -9,6 +9,8 @@ Pokedex é uma aplicação feita em React para web e mobile construída com o ob
 
 A aplicação consiste em mostrar todos os Pokémons com as suas estatíticas e habilidades, onde os dados são coletados da PokeAPI, e depois são listados no app web, que também apresenta imagens de cada Pokémon com recursos visuais baseados nestes dados.
 
+O design foi baseado nos componentes da biblioteca MATERIAL-UI que fornece componentes React para um desenvolvimento ágil e fácil.
+
 ## Layout mobile
 ![Mobile 1](https://user-images.githubusercontent.com/28218472/166842650-ccc97760-d512-42ae-8b8f-4c66832fd2b8.png)
 
