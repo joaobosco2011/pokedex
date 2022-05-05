@@ -59,3 +59,6 @@ João Bosco Falcão Carvalho Junior
 
  - Linkedin: https://www.linkedin.com/in/jo%C3%A3o-bosco-junior-8a9798115/
  - E-mail: joaobosco2011@gmail.com
+
+# Copyright Notice
+Este é um aplicativo não oficial, não comercial e não é afiliado, endossado ou apoiado pela Nintendo, Game Freak e The Pokémon Company de forma alguma. Muitas imagens usadas neste aplicativo são protegidas por direitos autorais e são suportadas pelo uso justo. Os nomes dos personagens Pokémon e Pokémon são marcas registradas da Nintendo. Não há intenção de infringir direitos de autoria.
