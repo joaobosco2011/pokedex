@@ -17,7 +17,7 @@ const App = () => {
       <Navbar />
             
       <Routes>
-        <Route path='/component/pokedex/*' element = {<Pokedex/>}/>
+        <Route path='/' element = {<Pokedex/>}/>
         <Route path='/component/sobre' element = {<Sobre />}/>
       </Routes>
     </Router>
