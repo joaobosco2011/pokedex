@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 // Importação dos componentes da aplicação
-import PokemonCard from './PokemonCard'
+import PokemonCard from '../component/PokemonCard'
 
 // Importação do css do componente POKEDEX
 import './Pokedex.css'

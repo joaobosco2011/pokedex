@@ -15,7 +15,7 @@ const Navbar = () => {
                     <Link className="navbar_menu_inicio" to='/'>Início</Link>
                 </li>
                 <li>
-                    <Link className="navbar_menu_sobre" to='/component/sobre'>Sobre</Link>
+                    <Link className="navbar_menu_sobre" to='/pages/sobre'>Sobre</Link>
                 </li>
             </ul>
         </div>

@@ -4,9 +4,9 @@ import React from 'react'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 // Importação dos componentes da aplicação
-import Sobre from './component/Sobre'
-import Pokedex from './component/Pokedex'
+import Sobre from './pages/Sobre'
 import Navbar from './component/Navbar'
+import Pokedex from './pages/Pokedex'
 
 
 // ----------------------------------==--------------------------------
@@ -18,7 +18,7 @@ const App = () => {
             
       <Routes>
         <Route path='/' element = {<Pokedex/>}/>
-        <Route path='/component/sobre' element = {<Sobre />}/>
+        <Route path='/pages/Sobre' element = {<Sobre />}/>
       </Routes>
     </Router>
   )

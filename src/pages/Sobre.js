@@ -1,5 +1,5 @@
 import React from "react";
-import CardSobre from './CardSobre'
+import CardSobre from '../component/CardSobre'
 
 
 // Importação do CSS

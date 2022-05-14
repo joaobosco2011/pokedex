@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import BarraDeProgresso from "./barra_de_progresso/BarraDeProgresso";
+import BarraDeProgresso from "./BarraDeProgresso";
 
 
 // ----------------------------------==--------------------------------
